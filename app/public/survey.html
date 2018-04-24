@@ -21,8 +21,8 @@
 	  </div>
 	  <hr>
 	  <div>
-	  	<p class="font-italic">When answering the questions, answer from 1 to 5, 1 meaning "strongly disagree", and 5 meaning "strongly agree."</p>
-	 	<label class="mr-sm-2"><span class="font-weight-bold">Question 1:</span> Do you like to spend time outside? </label>
+	  	<p class="font-italic">When answering the questions, answer from 1 to 5, 1 meaning "strongly disagree", and 5 meaning "strongly agree." All fields are required.</p>
+	 	<label class="mr-sm-2"><span class="font-weight-bold">Question 1:</span> I like to spend time outside.</label>
 	    <br>
 	      <select class="custom-select mr-sm-2" id="question1">
 	        <option selected><span class="font-italic">choose one...</span></option>
@@ -35,7 +35,7 @@
 	   </div>
 	   <br>
 	   <div>
-	 	<label class="mr-sm-2"><span class="font-weight-bold">Question 2:</span> Do you like to read books in your spare time?</label>
+	 	<label class="mr-sm-2"><span class="font-weight-bold">Question 2:</span> I like to read books in my spare time.</label>
 	    <br>
 	      <select class="custom-select mr-sm-2" id="question2">
 	        <option selected><span class="font-italic">choose one...</span></option>
@@ -48,7 +48,7 @@
 	   </div>
 	   <br>
 	   <div>
-	 	<label class="mr-sm-2"><span class="font-weight-bold">Question 3:</span> Do you enjoy listening to or playing music?</label>
+	 	<label class="mr-sm-2"><span class="font-weight-bold">Question 3:</span> I enjoy listening to or playing music.</label>
 	    <br>
 	      <select class="custom-select mr-sm-2" id="question3">
 	        <option selected><span class="font-italic">choose one...</span></option>
@@ -61,7 +61,7 @@
 	   </div>
 	   <br>
 	   <div>
-	 	<label class="mr-sm-2"><span class="font-weight-bold">Question 4:</span> Is spirituality an important part of your life?</label>
+	 	<label class="mr-sm-2"><span class="font-weight-bold">Question 4:</span> Spirituality is an important part of my life.</label>
 	    <br>
 		  <select class="custom-select mr-sm-2" id="question4">
 	        <option selected><span class="font-italic">choose one...</span></option>
@@ -74,7 +74,7 @@
 	   </div>
 	   <br>
 	   <div>
-	 	<label class="mr-sm-2"><span class="font-weight-bold">Question 5:</span> Do you find yourself always wanting more out of life?</label>
+	 	<label class="mr-sm-2"><span class="font-weight-bold">Question 5:</span> I find myself always wanting more out of life.</label>
 	    <br>
 	      <select class="custom-select mr-sm-2" id="question5">
 	        <option selected><span class="font-italic">choose one...</span></option>
@@ -87,7 +87,7 @@
 	   </div>
 	   <br>
 	   <div>
-	 	<label class="mr-sm-2"><span class="font-weight-bold">Question 6:</span> Do you like to frequently challenge yourself?</label>
+	 	<label class="mr-sm-2"><span class="font-weight-bold">Question 6:</span> I like to challenge myself.</label>
 	    <br>
 	      <select class="custom-select mr-sm-2" id="question6">
 	        <option selected><span class="font-italic">choose one...</span></option>
@@ -100,7 +100,7 @@
 	   </div>
 	   <br>
 	   <div>
-	 	<label class="mr-sm-2"><span class="font-weight-bold">Question 7:</span> Are you easily irritated by others?</label>
+	 	<label class="mr-sm-2"><span class="font-weight-bold">Question 7:</span> I am easily irritated by others.</label>
 	    <br>
 	      <select class="custom-select mr-sm-2" id="question7">
 	        <option selected><span class="font-italic">choose one...</span></option>
@@ -113,7 +113,7 @@
 	   </div>
 	   <br>
 	   <div>
-	 	<label class="mr-sm-2"><span class="font-weight-bold">Question 8:</span> Do you value putting your best effort into everything you do?</label>
+	 	<label class="mr-sm-2"><span class="font-weight-bold">Question 8:</span> I value putting my best effort into everything I do.</label>
 	    <br>
 	      <select class="custom-select mr-sm-2" id="question8">
 	        <option selected><span class="font-italic">choose one...</span></option>
@@ -126,7 +126,7 @@
 	   </div>
 	   <br>
 	   <div>
-	 	<label class="mr-sm-2"><span class="font-weight-bold">Question 9:</span> Do you value seeking out maintaining the truth about the world?</label>
+	 	<label class="mr-sm-2"><span class="font-weight-bold">Question 9:</span> I value seeking out and defending the truth about the world.</label>
 	    <br>
 	      <select class="custom-select mr-sm-2" id="question9">
 	        <option selected><span class="font-italic">choose one...</span></option>
@@ -139,7 +139,7 @@
 	   </div>
 	   <br>
 	   <div>
-	 	<label class="mr-sm-2"><span class="font-weight-bold">Question 10:</span> Are you easily carried away by your reactions?</label>
+	 	<label class="mr-sm-2"><span class="font-weight-bold">Question 10:</span> I am easily carried away by my reactions.</label>
 	    <br>
 	      <select class="custom-select mr-sm-2" id="question10">
 	        <option selected><span class="font-italic">choose one...</span></option>
@@ -157,7 +157,7 @@
 	</form> 
 	<hr>
 	<div>
-		<p><a href="">API Friends List </a>|<a href=""> GitHub Repo</a> | <a href="/">Home</a></p>
+		<p><a href="/api/friends">API Friends List </a>|<a href="https://github.com/Jon-Erik/Friend-Finder"> GitHub Repo</a> | <a href="/">Home</a></p>
 	</div>
 	<br>
 </body>
@@ -174,18 +174,27 @@
 		}
 
 		var newFriend = {
-			name: $("#inputName").val().trim(),
-			photo: $("#imageURL").val().trim(),
-			scores: scoresArray
+			'name': $("#inputName").val().trim(),
+			'photo': $("#imageURL").val().trim(),
+			'scores': scoresArray
 		}
 
-		//console.log(newFriend);
-
-		$.post("/api/new", newFriend)
-	      .then(function(data) {
-	        console.log(data);
-	        alert("Adding friend...");
-	      });
+		var userChecks = 0;
+		for (i = 0; i < scoresArray.length; i++) {
+			if (scoresArray[i] === "choose one..." || newFriend.name === "" || newFriend.photo === "") {
+				alert("Please ensure all fields are completed.");
+				return;
+			} else {
+				userChecks++;
+				if (userChecks === 10) {
+					$.post("/api/friends", newFriend)
+				      .then(function(data) {
+				        console.log(data);
+				        alert("Adding friend...");
+				      });
+				}
+			}
+		}
 	});
 </script>
 </html>
