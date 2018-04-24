@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Friend Finder Survey</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body class="container">
+	<h2>Friend Finder Survey</h2>
+	<hr>
+	<h3>About You</h3>
+	<form>
+	  <div class="form-group">
+	    <label>Name <span class="font-italic">(Required)</span></label>
+	    <input type="text" class="form-control" id="inputName" placeholder="Your Name Here">
+	  </div>
+	  <div class="form-group">
+	    <label>Link to a photo image <span class="font-italic">(Required)</span></label>
+	    <input type="url" class="form-control" id="imageURL" placeholder="https://domain.com/myphoto.jpg">
+	  </div>
+	  <hr>
+	  <div>
+	  	<p class="font-italic">When answering the questions, answer from 1 to 5, 1 meaning "strongly disagree", and 5 meaning "strongly agree."</p>
+	 	<label class="mr-sm-2"><span class="font-weight-bold">Question 1:</span> Do you like to spend time outside? </label>
+	    <br>
+	      <select class="custom-select mr-sm-2" id="question1">
+	        <option selected><span class="font-italic">choose one...</span></option>
+	        <option value="1">1 </option>
+	        <option value="2">2</option>
+	        <option value="3">3</option>
+	        <option value="4">4</option>
+	        <option value="5">5 </option>
+	      </select>
+	   </div>
+	   <br>
+	   <div>
+	 	<label class="mr-sm-2"><span class="font-weight-bold">Question 2:</span> Do you like to read books in your spare time?</label>
+	    <br>
+	      <select class="custom-select mr-sm-2" id="question2">
+	        <option selected><span class="font-italic">choose one...</span></option>
+	        <option value="1">1 </option>
+	        <option value="2">2</option>
+	        <option value="3">3</option>
+	        <option value="4">4</option>
+	        <option value="5">5 </option>
+	      </select>
+	   </div>
+	   <br>
+	   <div>
+	 	<label class="mr-sm-2"><span class="font-weight-bold">Question 3:</span> Do you enjoy listening to or playing music?</label>
+	    <br>
+	      <select class="custom-select mr-sm-2" id="question3">
+	        <option selected><span class="font-italic">choose one...</span></option>
+	        <option value="1">1 </option>
+	        <option value="2">2</option>
+	        <option value="3">3</option>
+	        <option value="4">4</option>
+	        <option value="5">5 </option>
+	      </select>
+	   </div>
+	   <br>
+	   <div>
+	 	<label class="mr-sm-2"><span class="font-weight-bold">Question 4:</span> Is spirituality an important part of your life?</label>
+	    <br>
+		  <select class="custom-select mr-sm-2" id="question4">
+	        <option selected><span class="font-italic">choose one...</span></option>
+	        <option value="1">1 </option>
+	        <option value="2">2</option>
+	        <option value="3">3</option>
+	        <option value="4">4</option>
+	        <option value="5">5 </option>
+	      </select>
+	   </div>
+	   <br>
+	   <div>
+	 	<label class="mr-sm-2"><span class="font-weight-bold">Question 5:</span> Do you find yourself always wanting more out of life?</label>
+	    <br>
+	      <select class="custom-select mr-sm-2" id="question5">
+	        <option selected><span class="font-italic">choose one...</span></option>
+	        <option value="1">1 </option>
+	        <option value="2">2</option>
+	        <option value="3">3</option>
+	        <option value="4">4</option>
+	        <option value="5">5 </option>
+	      </select>
+	   </div>
+	   <br>
+	   <div>
+	 	<label class="mr-sm-2"><span class="font-weight-bold">Question 6:</span> Do you like to frequently challenge yourself?</label>
+	    <br>
+	      <select class="custom-select mr-sm-2" id="question6">
+	        <option selected><span class="font-italic">choose one...</span></option>
+	        <option value="1">1 </option>
+	        <option value="2">2</option>
+	        <option value="3">3</option>
+	        <option value="4">4</option>
+	        <option value="5">5 </option>
+	      </select>
+	   </div>
+	   <br>
+	   <div>
+	 	<label class="mr-sm-2"><span class="font-weight-bold">Question 7:</span> Are you easily irritated by others?</label>
+	    <br>
+	      <select class="custom-select mr-sm-2" id="question7">
+	        <option selected><span class="font-italic">choose one...</span></option>
+	        <option value="1">1 </option>
+	        <option value="2">2</option>
+	        <option value="3">3</option>
+	        <option value="4">4</option>
+	        <option value="5">5 </option>
+	      </select>
+	   </div>
+	   <br>
+	   <div>
+	 	<label class="mr-sm-2"><span class="font-weight-bold">Question 8:</span> Do you value putting your best effort into everything you do?</label>
+	    <br>
+	      <select class="custom-select mr-sm-2" id="question8">
+	        <option selected><span class="font-italic">choose one...</span></option>
+	        <option value="1">1 </option>
+	        <option value="2">2</option>
+	        <option value="3">3</option>
+	        <option value="4">4</option>
+	        <option value="5">5 </option>
+	      </select>
+	   </div>
+	   <br>
+	   <div>
+	 	<label class="mr-sm-2"><span class="font-weight-bold">Question 9:</span> Do you value seeking out maintaining the truth about the world?</label>
+	    <br>
+	      <select class="custom-select mr-sm-2" id="question9">
+	        <option selected><span class="font-italic">choose one...</span></option>
+	        <option value="1">1 </option>
+	        <option value="2">2</option>
+	        <option value="3">3</option>
+	        <option value="4">4</option>
+	        <option value="5">5 </option>
+	      </select>
+	   </div>
+	   <br>
+	   <div>
+	 	<label class="mr-sm-2"><span class="font-weight-bold">Question 10:</span> Are you easily carried away by your reactions?</label>
+	    <br>
+	      <select class="custom-select mr-sm-2" id="question10">
+	        <option selected><span class="font-italic">choose one...</span></option>
+	        <option value="1">1 </option>
+	        <option value="2">2</option>
+	        <option value="3">3</option>
+	        <option value="4">4</option>
+	        <option value="5">5 </option>
+	      </select>
+	   </div>
+	   <br>
+    <div>
+      <button type="submit" id="submitbtn" class="btn btn-primary"><i class="fas fa-check-square"></i> Submit</button>
+    </div>
+	</form> 
+	<hr>
+	<div>
+		<p><a href="">API Friends List </a>|<a href=""> GitHub Repo</a> | <a href="/">Home</a></p>
+	</div>
+	<br>
+</body>
+<script type="text/javascript">
+	$("#submitbtn").on("click", function(event) {
+		//alert("test");
+		event.preventDefault();
+
+		var scoresArray = [];
+
+		for (i = 1; i < 11; i++) {
+			var score = $("#question" + [i] + "").val();
+			scoresArray.push(score);
+		}
+
+		var newFriend = {
+			name: $("#inputName").val().trim(),
+			photo: $("#imageURL").val().trim(),
+			scores: scoresArray
+		}
+
+		//console.log(newFriend);
+
+		$.post("/api/new", newFriend)
+	      .then(function(data) {
+	        console.log(data);
+	        alert("Adding friend...");
+	      });
+	});
+</script>
+</html>
