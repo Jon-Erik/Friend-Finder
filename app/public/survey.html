@@ -163,7 +163,6 @@
 </body>
 <script type="text/javascript">
 	$("#submitbtn").on("click", function(event) {
-		//alert("test");
 		event.preventDefault();
 
 		var scoresArray = [];
@@ -179,6 +178,8 @@
 			'scores': scoresArray
 		}
 
+		console.log(newFriend)
+
 		var userChecks = 0;
 		for (i = 0; i < scoresArray.length; i++) {
 			if (scoresArray[i] === "choose one..." || newFriend.name === "" || newFriend.photo === "") {
@@ -187,10 +188,10 @@
 			} else {
 				userChecks++;
 				if (userChecks === 10) {
+					$.ajaxSetup({ traditional: true });
 					$.post("/api/friends", newFriend)
 				      .then(function(data) {
 				        console.log(data);
-				        alert("Adding friend...");
 				      });
 				}
 			}
