@@ -30,18 +30,18 @@ module.exports = function(app) {
 
 					sumDifference = sumDifference + addedDifference;
 				}
-				console.log("This sumDifference is " + sumDifference)
+				//console.log("This sumDifference is " + sumDifference)
 
 				if (lowestDifference === undefined) {
 					lowestDifference = sumDifference;
 					friendMatch = friendsArray[i];
-					console.log("The friendMatch so far is " + friendMatch.name);
+					//console.log("The friendMatch so far is " + friendMatch.name);
 				} else if (sumDifference < lowestDifference) {
 					lowestDifference = sumDifference;
 					friendMatch = friendsArray[i];
-					console.log("The friendMatch so far is " + friendMatch.name);
+					//console.log("The friendMatch so far is " + friendMatch.name);
 				} else {
-					console.log("The friendMatch so far is " + friendMatch.name);
+					//console.log("The friendMatch so far is " + friendMatch.name);
 				}
 			}
 
@@ -49,7 +49,7 @@ module.exports = function(app) {
 
 			friendsArray.push(newFriend);
 
-			console.log(friendsArray);
+			//console.log(friendsArray);
 			
 			fs.writeFile(path.join(__dirname, '../data/friends.txt'), JSON.stringify(friendsArray), function (err) {
 				if (err) {
@@ -57,7 +57,10 @@ module.exports = function(app) {
 				} 
 			 	console.log('friends.txt was updated');
 				});
+			
+			console.log(friendMatch);
+			res.json(friendMatch);
 		})
-		res.status(200).send();
+		
 	})
 }
